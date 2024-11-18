@@ -1,0 +1,404 @@
+/* Global Styles */
+body {
+    font-family: 'Big Caslon', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background: black;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.site-name {
+    font-size: 1.5rem;
+    color: white;
+    margin: 0;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.nav-list li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* Parallax Project Section */
+.projects-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.project {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust height as desired */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Creates the parallax effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Overlay text styling */
+.overlay h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.overlay p {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* Header Section Styles */
+.header-section {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.header-image,
+.header-content {
+    flex: 1;
+    width: 100%;
+}
+
+.header-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    text-align: left;
+}
+
+.header-content h1,
+.header-content p {
+    margin: 0;
+    font-weight: normal;
+}
+
+.header-content h1 {
+    font-size: 2.5rem;
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* About Sections */
+.about-sections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.about-section {
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Portfolio Projects Section */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    padding-left: 50px;
+}
+
+.project {
+    position: relative;
+    width: calc(50% - 20px);
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.overlay h3 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.overlay p {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* Resume Section */
+.resume-section {
+    max-width: 800px; /* Set a max width for the resume section */
+    margin: 3em auto; /* Center the resume section horizontally and add space from the top */
+    padding: 3em; /* Add padding to create space inside the section */
+    background-color: #1e1e1e; /* Dark background to match site theme */
+    color: #f0f0f0; /* Light text for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 15px rgba(255, 255, 255, 0.1); /* Soft shadow for floating effect */
+    text-align: left; /* Left align the text */
+    margin-bottom: 3em; /* Add space below the resume section */
+}
+
+/* Resume Content */
+.resume-content {
+    margin-bottom: 2em; /* Add space below the content for better separation */
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.resume-content h3 {
+    font-size: 2rem; /* Slightly larger for better prominence */
+    margin-bottom: 20px; /* Increase space below section headers */
+    color: #ffa0ea; /* Light pink color for section titles */
+    font-weight: bold; /* Bold for better hierarchy */
+}
+
+.resume-content p {
+    margin-bottom: 2em; /* Add space between paragraphs */
+    line-height: 4; /* Improve readability by increasing line height */
+}
+
+/* List Styling */
+.resume-content ul {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 0; /* Remove default padding */
+    margin-bottom: 1.5em; /* Add space below the list */
+}
+
+.resume-content ul li {
+    margin-bottom: 15px; /* Space between list items */
+    padding-left: 25px; /* Increase indent for a cleaner layout */
+    position: relative; /* Required for custom bullet positioning */
+    font-size: 1rem; /* Set a comfortable font size for content */
+}
+
+
+/* Download Link */
+.download-link {
+    text-align: center; /* Align the download button to the left */
+    margin-top: 2em; /* Add space above the download button */
+    padding: 2em 0; /* Add top and bottom padding for button area */
+}
+
+.download-button {
+    display: inline-block;
+    padding: 0.75em 1.5em; /* Adjust padding for a more clickable feel */
+    background-color: #ffa0ea; /* Button color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s ease, box-shadow 0.3s; /* Added transition for shadow effect */
+}
+
+.download-button:hover {
+    background-color: #f775db; /* Darker shade on hover */
+    transform: scale(1.05); /* Scale up on hover for emphasis */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Add a glow effect on hover */
+}
+
+.download-button:active {
+    transform: scale(1); /* Slightly reset scale when clicked for a subtle effect */
+}
+
+
+/* About Sections */
+.about-sections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.about-section {
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Gallery Section */
+.gallery-section {
+    padding: 40px 0;
+    text-align: center;
+    background: black;
+    width: 100%;
+    max-width: 100vw;
+}
+
+.gallery-section h2 {
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.gallery-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-track {
+    display: flex;
+    width: fit-content;
+    animation: scroll 120s linear infinite;
+    gap: 0;
+}
+
+.gallery-item {
+    flex: 0 0 auto;
+    width: calc(20vw); /* Shows exactly 3 images */
+    height: 300px; /* Fixed height for all images */
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: contrast(110%) brightness(110%) grayscale(10%);
+}
+
+
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% / 2));
+    }
+}
+
+/* Optional: add noise animation */
+@keyframes moveNoise {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(100%, 100%); }
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-section {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 2rem;
+    }
+
+    .header-content p {
+        font-size: 1rem;
+    }
+
+    .about-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .about-section p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .project {
+        background-attachment: scroll;
+    }
+}
