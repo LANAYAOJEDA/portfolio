@@ -1,96 +1,122 @@
+<!--
+References for the about page: 
+- https://www.w3schools.com/howto/howto_js_tabs.asp
+- https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp
+- https://www.youtube.com/watch?v=Y4n9bYLjrIE 
+- https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark 
+- https://gsap.com/docs/v3/Plugins/ScrambleTextPlugin/ 
+- https://gsap.com/docs/v3/Eases/
+- https://www.w3schools.com/css/css_font_google.asp
+--> 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>About - Lizeth Anaya-Ojeda</title>
+    <link rel="icon" type="image/png" href="images/LA-logo.png">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="header-container">
             <p class="site-name">Lizeth Anaya-Ojeda</p>
             <nav>
+                <div class="menu-toggle">&#9776;</div>
                 <ul class="nav-list">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="resume.html">Resume</a></li>
                 </ul>
             </nav>
+            <!--Button which enables light and dark mode-->
+            <button class="mode-toggle" id="modeToggle">🌙</button> 
         </div>
     </header>
 
     <section class="header-section">
+        <!-- Image Options for Light vs Dark mode -->
         <div class="header-image">
-            <img src="images/about-me.png" alt="About Me Image" class="header-img">
+            <img src="images/about-me-dark.png" alt="Aura image of Lizeth with a black background" class="header-img dark-mode-img">
+            <img src="images/about-me-light.png" alt="Aura image of Lizeth with a white background" class="header-img light-mode-img">
         </div>
         <div class="header-content">
             <h1>¡Bienvenidos!</h1>
-            <p>I’m Lizeth Anaya-Ojeda, an aspiring user experience designer committed to always creating inclusive technology solutions.</p>
+            <p>I'm Lizeth Anaya-Ojeda, an aspiring user experience designer committed to always creating inclusive technology solutions.</p>
         </div>
     </section>
 
-    <section class="about-sections">
-        <div class="about-section">
-            <h2>Why Statement</h2>
-            <p>My purpose is to bridge the digital divide by creating technology that is accessible to everyone, especially marginalized communities. My journey as an undocumented immigrant has fueled my desire to advocate for those who often lack representation in tech development.</p>
+    <section class="about-container">
+        <div class="about-statement">
+            <h2>What drives me</h2>
+            <p>🏜️🌞🇲🇽🧡</p>
+            <p>I grew up in the vast deserts of New Mexico, where the landscape's spiritual energy constantly fuels my creativity. There's a quiet strength in the desert that I carry with me in both my personal and professional life. My roots trace back to Northern Mexico, and my cultural heritage shapes everything I do, from the way I approach design to how I build connections. I bring a sense of community, resilience, and authenticity into my work and life.</p>
+            <p>✨🧚🏼‍♀️🔮🦋</p>
+            <p>When I'm not busy brainstorming the next big idea, you'll likely find me experimenting with new latte recipes, paddleboarding (or attempting not to faceplant into the water), hitting the gym, or collecting crystals that definitely aren't magical… but I like to think they are. Balance is key—recharging and having a little fun while staying inspired!</p>
         </div>
-
-        <div class="about-section">
-            <h2>Values</h2>
-            <p>Empathy and compassion guide my work. I believe in the power of collaboration and the importance of listening to diverse voices in the design process. My experiences have taught me that understanding the needs of others is key to creating meaningful solutions.</p>
-        </div>
-
-        <div class="about-section">
-            <h2>Future Aspirations</h2>
-            <p>Looking ahead, I aim to leverage my skills in Human-Computer Interaction to develop intuitive interfaces for immigrant populations and advocate for ethical considerations in technology. I envision a future where technology transcends barriers and empowers diverse communities to thrive.</p>
+        <div class="about-tabs">
+            <div class="tabs">
+                <button class="tab-button active" data-tab="why-statement">My "Why"</button>
+                <button class="tab-button" data-tab="values">Values</button>
+                <button class="tab-button" data-tab="future-aspirations">Future Aspirations</button>
+            </div>
+            <div class="tab-content active" id="why-statement">
+                <h1>Bridge the Digital Divide</h1>
+                <p>Create accessible technology for everyone, especially marginalized communities. My purpose is to develop solutions that address the unique challenges faced by underrepresented groups, ensuring that technology serves all members of society equally.</p>
+                <h1>Advocate for Representation</h1>
+                <p>Use my personal experience as an Mexican immigrant to champion diversity in tech development. I strive to bring diverse perspectives into the tech industry, ensuring that products and services reflect the needs of all users.</p>
+                <h1>Empower Through Technology</h1>
+                <p>Develop innovative solutions that address real-world challenges faced by underrepresented groups. By creating user-centric technologies, I aim to empower individuals and communities, providing them with tools to overcome barriers and thrive in the digital age.</p>
+            </div>
+            <div class="tab-content" id="values">
+                <h1>Empathy-Driven Design</h1>
+                <p>Prioritize understanding and addressing user needs in all design processes. By putting myself in the shoes of diverse users, I create solutions that are truly inclusive and effective, ensuring that technology serves everyone's needs.</p>
+                <h1>Collaborative Innovation</h1>
+                <p>Embrace diverse perspectives to create more inclusive and effective solutions. I believe in the power of collaboration and the importance of listening to diverse voices in the design process, leading to more comprehensive and impactful innovations.</p>
+                <h1>Ethical Consideration</h1>
+                <p>Ensure that all technological advancements are guided by moral considerations and social responsibility. I am committed to developing technology that not only solves problems but also upholds ethical standards and contributes positively to society.</p>
+            </div>
+            <div class="tab-content" id="future-aspirations">
+                <h1>Intuitive Interfaces for Immigrants</h1>
+                <p>Develop user-friendly technologies tailored to immigrant populations. By leveraging my skills in Human-Computer Interaction, I aim to create interfaces that are intuitive and accessible, helping immigrants navigate digital spaces with ease.</p>
+                <h1>Ethical Tech Advocacy</h1>
+                <p>Promote responsible development and use of technology in the industry. I aspire to become a thought leader in ethical technology, shaping policies and practices that ensure the responsible creation and implementation of tech solutions.</p>
+                <h1>Community Empowerment</h1>
+                <p>Leverage HCI skills to create tools that enable diverse communities to thrive in the digital age. My goal is to develop technologies that respect and adapt to diverse cultural contexts, promoting global understanding and cooperation while empowering communities to harness the full potential of technology.</p>
+            </div>
         </div>
     </section>
-
 
     <section class="gallery-section">
         <h2>Mi Vida en Fotos</h2>
         <div class="gallery-container">
             <div class="gallery-track">
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item1.jpg" alt="Gallery Image 1"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item2.jpg" alt="Gallery Image 2"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item3.jpg" alt="Gallery Image 3"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item4.jpg" alt="Gallery Image 4"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item5.jpg" alt="Gallery Image 5"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item6.jpg" alt="Gallery Image 6"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item7.jpg" alt="Gallery Image 7"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item8.jpg" alt="Gallery Image 8"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item9.jpg" alt="Gallery Image 9"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item10.jpg" alt="Gallery Image 10"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item11.jpg" alt="Gallery Image 11"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item12.jpg" alt="Gallery Image 12"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item13.jpg" alt="Gallery Image 13"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item14.jpg" alt="Gallery Image 14"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item15.jpg" alt="Gallery Image 15"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item16.jpg" alt="Gallery Image 16"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item17.jpg" alt="Gallery Image 17"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item18.jpg" alt="Gallery Image 18"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item19.jpg" alt="Gallery Image 19"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item20.jpg" alt="Gallery Image 20"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item21.jpg" alt="Gallery Image 21"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item22.jpg" alt="Gallery Image 22"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item23.jpg" alt="Gallery Image 23"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item24.jpg" alt="Gallery Image 24"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item25.jpg" alt="Gallery Image 25"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item26.jpg" alt="Gallery Image 26"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item27.jpg" alt="Gallery Image 27"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item28.jpg" alt="Gallery Image 28"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item29.jpg" alt="Gallery Image 29"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item30.jpg" alt="Gallery Image 30"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item31.jpg" alt="Gallery Image 31"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item32.jpg" alt="Gallery Image 32"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item33.jpg" alt="Gallery Image 33"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item34.jpg" alt="Gallery Image 34"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item35.jpg" alt="Gallery Image 35"></div>
+                <div class="gallery-item"><img src="images/gallery-items/gallery-item1.jpg" alt="Lizeth walks down a hallway wearing a gray outfit, looking back over her shoulder at the camera with a warm smile."></div>
+                <div class="gallery-item"><img src="images/gallery-items/gallery-item2.jpg" alt="Lizeth poses with her siblings in a staggered portrait arrangement, all smiling together in a family moment."></div>
+                <div class="gallery-item"><img src="images/gallery-items/gallery-item3.jpg" alt="A birthday cake with a Twilight theme, featuring design elements inspired by the iconic book and movie series."></div>
+                <div class="gallery-item"><img src="images/gallery-items/gallery-item4.jpg" alt="A wooden sign with the words 'Carnegie Mellon University' engraved, symbolizing the prestigious institution."></div>
+                <div class="gallery-item"><img src="images/gallery-items/gallery-item5.jpg" alt="A vibrant pink lily flower in full bloom, with delicate petals fanning out gracefully."></div>
+                <div class="gallery-item"><img src="images/gallery-items/gallery-item6.jpg" alt="A scenic view of the Great Divide mountain range in Colorado, showcasing rugged peaks under an expansive sky."></div>
+                <div class="gallery-item"><img src="images/gallery-items/gallery-item7.jpg" alt="A sign at the Gates Hillman Center displaying the School of Computer Science logo, marking the entrance to the building."></div>
+                <div class="gallery-item"><img src="images/gallery-items/gallery-item8.jpg" alt="Lizeth poses in front of the Forks, Washington welcome sign, smiling and commemorating her visit to the iconic Twilight-inspired location."></div>
+                <div class="gallery-item"><img src="images/gallery-items/gallery-item9.jpg" alt="Lizeth poses inside a New York City subway station, capturing the urban energy of the iconic transit system."></div>
+                <div class="gallery-item"><img src="images/gallery-items/gallery-item10.jpg" alt="Lizeth skiing in Northern New Mexico snowy mountain range."></div>
             </div>
         </div>
     </section>
+
+    <footer>
+        <div class="footer-container">
+            <h1 class="header-text">You've scrolled this far—why not take the next step? Let's connect on LinkedIn!</h1>
+            <a href="https://www.linkedin.com/in/yourlinkedinprofile" class="linkedin-button">
+                <img src="images/linkedin-icon.png" alt="LinkedIn Icon" class="linkedin-icon" />
+                LinkedIn
+            </a>
+        </div>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>

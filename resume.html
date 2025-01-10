@@ -3,35 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Resume</title>
+    <title>Resume</title>
+    <link rel="icon" type="image/png" href="images/LA-logo.png">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="header-container">
-            <p class="site-name">Lizeth Anaya-Ojeda</p>
+            <a href="index.html"><p class="site-name">Lizeth Anaya-Ojeda</p></a>
             <nav>
+                <div class="menu-toggle">&#9776;</div>
                 <ul class="nav-list">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="resume.html">Resume</a></li>
                 </ul>
             </nav>
+            <!--Button that enables light and dark mode-->
+            <button class="mode-toggle" id="modeToggle">🌙</button>
         </div>
     </header>
+
     <main>
         <h2 style="text-align: center;">Resume</h2>
         <div class="resume-content">
             <h3>EDUCATION</h3>
             <ul>
-                <li><strong>Carnegie Mellon University</strong> | School of Computer Science <br>
+                <li>
+                    <strong>Carnegie Mellon University</strong> | School of Computer Science <br>
                     Pittsburgh, PA <br>
                     Master of Human-Computer Interaction <br>
                     August 2025 <br>
                     CMU Rales Fellow - Awarded full tuition based on merit
                 </li>
-                <li><strong>New Mexico Institute of Mining and Technology</strong> <br>
+                <li>
+                    <strong>New Mexico Institute of Mining and Technology</strong> <br>
                     Socorro, NM <br>
                     Bachelor of Science - Technical Communication <br>
                     May 2022 <br>
@@ -41,34 +49,34 @@
 
             <h3>PROFESSIONAL EXPERIENCE</h3>
             <ul>
-                <li><strong>Dataminr</strong> <br>
+                <li>
+                    <strong>Dataminr</strong> <br>
                     New York, NY <br>
                     <em>Associate Digital Content Strategist</em> <br>
                     June 2022 - January 2023
                     <ul>
-                        <li></li>
                         <li>⭐️ Led a comprehensive SEO audit, increasing organic web traffic by 15% through strategic content optimization and data-driven improvements.</li>
                         <li>⭐️ Spearheaded weekly analytics reviews, leading to a 10% improvement in website engagement by refining growth strategies based on performance insights.</li>
                         <li>⭐️ Conducted a tech stack review, securing a Digital Asset Management (DAM) solution projected to streamline content workflows by 20% and improve asset retrieval times by 30%.</li>
                     </ul>
                 </li>
-                <li><strong>Dataminr</strong> <br>
+                <li>
+                    <strong>Dataminr</strong> <br>
                     New York, NY <br>
                     <em>Marketing Communications Intern</em> <br>
                     June 2021 - April 2022
                     <ul>
-                        <li></li>
                         <li>⭐️ Launched a company-wide social media program, managing 20+ campaigns that resulted in a 20% increase in follower growth.</li>
                         <li>⭐️ Collaborated with leadership to develop 5 digital marketing strategies, aligning with brand goals to drive a 12% increase in lead generation.</li>
                         <li>⭐️ Provided qualitative research and analytical support, optimizing campaign performance by 18% through targeted adjustments based on key engagement metrics.</li>
                     </ul>
                 </li>
-                <li><strong>Flow Science Inc.</strong> <br>
+                <li>
+                    <strong>Flow Science Inc.</strong> <br>
                     Santa Fe, NM <br>
                     <em>Marketing Intern</em> <br>
                     June 2018 - August 2018
                     <ul>
-                        <li></li>
                         <li>⭐️ Managed the backend of the company website using WordPress, ensuring consistency across metadata and digital content, which improved user experience and streamlined communication.</li>
                         <li>⭐️ Translated engineering brochures from English to Spanish, enhancing accessibility and engagement for Latin-American customers, and improving overall brand perception in international markets.</li>
                         <li>⭐️ Collaborated with cross-functional teams on C++ and GUI translation projects, delivering findings and recommendations to engineering stakeholders.</li>
@@ -78,7 +86,8 @@
 
             <h3>COMMUNITY SERVICE</h3>
             <ul>
-                <li><strong>New Mexico Institute of Mining and Technology</strong> <br>
+                <li>
+                    <strong>New Mexico Institute of Mining and Technology</strong> <br>
                     Grant Proposal Writer, On-Campus Food Pantry <br>
                     December 2022
                     <ul>
@@ -88,11 +97,12 @@
             </ul>
         </div>
         <div class="download-link">
-            <a href="path/to/your/resume.pdf" class="download-button">Download Resume</a>
+            <a href="images/resume.pdf" class="download-button">Download Resume</a>
         </div>
     </main>
     <footer>
-        <p>&copy; 2024 Lizeth Anaya-Ojeda</p>
+        <p>&copy; 2024 Lizeth G. Anaya-Ojeda</p>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
