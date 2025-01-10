@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
     const navList = document.querySelector('.nav-list');
 
-    // Function to update header image visibility based on current display mode
+    // Function to update header image visibility based on current display mode of site
     function updateHeaderImage() {
         const isDarkMode = !body.classList.contains('light-mode');
         document.querySelectorAll('.dark-mode-img, .light-mode-img').forEach(img => {
